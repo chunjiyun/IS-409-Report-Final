@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Project Title</title>
+  <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css" />
+  <script type="module"
+    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace-autoloader.js"></script>
+
+  <link rel="stylesheet" href="./index.css" />
+
+  <link rel="stylesheet" href="./components/team-member/team-member.css" />
+  <script type="module" src="./components/team-member/team-member.js"></script>
+
+  <link rel="stylesheet" href="./components/table-of-content/table-of-content.css" />
+
+  <script type="module" src="./components/image/image-component.js"></script>
+
+  <script type="module" src="./components/video/video.js"></script>
+
+  <link rel="stylesheet" href="./components/references/references.css" />
+
+  <link rel="stylesheet" href="./components/scroll-to-top/scroll-to-top.css" />
+  <script src="./components/scroll-to-top/scroll-to-top.js"></script>
+
+  <script src="./components/table-component/table-component.js"></script>
+
+  <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="content">
+    <image-component tag="image" source="assets/nus-logo.png" subtitle=""></image-component>
+    <h2 style="text-align: center">
+      IS-409: Innovative Design for Composite Tooling
+    </h2>
+    <h3 style="text-align: center">Chun Jiyun</h3>
+    <h3 style="text-align: center">
+      CDE4301 Innovation & Design Capstone
+    </h3>
+    <h3 style="text-align: center">AY2024/2025 Semester 2</h3>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <!-- This is the team member component use to display details about your team members
+    <div class="team-member-wrapper">
+      <team-member avatar="assets/blackranger.png" name="Black" department="Mechanical Engineering"
+        year="2024"></team-member>
+    </div> -->
+
+    <!-- This is a divide from the shoelace library for aesthetic purpose -->
+    <sl-divider></sl-divider>
+    <div>
+      <div id="acknowledgement">
+        <h2>Acknowledgement</h2>
+        <p>
+          I would like to express my sincere gratitude to my project supervisors, Lim Hong Wee and Kenneth Neo, for
+          their unwavering support, patience, and guidance throughout this project. Their extensive experience and
+          technical expertise have been invaluable, helping me navigate challenges and refine my ideas.
+          <br /><br />
+          I would also like to extend my thanks to Dr. Elliot Law, the examiner for this project, for his insightful and
+          constructive feedback, which greatly contributed to the enhancement of this work.
+          <br /><br />
+          Finally, I appreciate all the professors and mentors who have shared their knowledge and wisdom with me over
+          the past four years of my Bachelor's degree.
+        </p>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+    <!-- This is the table-of-content component use to define all of the link directly to each section -->
+    <div class="table-of-content">
+      <h2>Table of Contents</h2>
+      <sl-tree>
+        <sl-tree-item expanded>
+          <a href="#section-header-1">1. Introduction</a>
+          <sl-tree-item>
+            <a href="#sub-section-1-header-1">1.1. Growing Global Demand For Composite Materials</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#sub-section-1-header-2">1.2. Composite Manufacturing in Industry vs. In-House </a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#sub-section-1-header-3">1.3. Three In-House Composite Manufacturing Processes</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#sub-section-1-header-4">1.4. Using Prepreg to Fabricate a Composite Part</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#sub-section-1-header-5">1.5. Challenges in Vacuum Bagging Process</a>
+          </sl-tree-item>
+        </sl-tree-item>
+
+        <sl-tree-item>
+          <a href="#section-header-2">2. Design Statement</a>
+        </sl-tree-item>
+
+        <sl-tree-item>
+          <a href="#section-header-3">3. Value Proposition</a>
+        </sl-tree-item>
+
+        <sl-tree-item expanded>
+          <a href="#section-header-4">4. Finding Reusable Vacuum Bagging Material</a>
+          <sl-tree-item>
+            <a href="#sub-section-4-header-1">4.1. Design Specifications For Reusable Vacuum Bagging Material</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#sub-section-4-header-2">4.2. Sourcing And Purchasing of Silicone Sheet</a>
+          </sl-tree-item>
+        </sl-tree-item>
+
+        <sl-tree-item expanded>
+          <a href="#section-header-5">5. ASTM D412 Experiment With Silicone</a>
+          <sl-tree-item>
+            <a href="#sub-section-5-header-1">5.1. Experiment Objective</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#sub-section-5-header-2">5.2. Experiment Hypothesis</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#sub-section-5-header-3">5.3. Experiment Preparation</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#sub-section-5-header-4">5.4. Experiment Procedure</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#sub-section-5-header-5">5.5. Experiment Results and Analysis</a>
+          </sl-tree-item>
+        </sl-tree-item>
+
+        <sl-tree-item expanded>
+          <a href="#section-header-6">6. Concept Design</a>
+          <sl-tree-item>
+            <a href="#sub-section-6-header-1">6.1. Concept Design Generation</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#sub-section-6-header-2">6.2. Final Concept Design</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#sub-section-6-header-3">6.3. How the Final Concept Design Addresses the Two Challenges</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#sub-section-6-header-4">6.4. Design Specification of the Chosen Concept Design</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#sub-section-6-header-5">6.5. Fully Assembled Silicone Vacuum Bagging System</a>
+          </sl-tree-item>
+        </sl-tree-item>
+
+        <sl-tree-item expanded>
+          <a href="#section-header-7">7. Tests Using Silicone Vacuum Bagging System</a>
+          <sl-tree-item>
+            <a href="#sub-section-7-header-1">7.1. Test 1: Mold Compatibility For Silicone Vacuum Bagging</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#sub-section-7-header-2">7.2. Test 2: Examining How Sharp Edges (Non-Concave) Behave Under
+              Vacuum</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#sub-section-7-header-3">7.3. Test 3: Evaluating Mold Height and Radius Formation Across Different
+              Sample Dimensions</a>
+          </sl-tree-item>
+        </sl-tree-item>
+
+        <sl-tree-item expanded>
+          <a href="#section-header-8">8. Fabricating a Composite Prototype Using Silicone Vacuum Bagging</a>
+          <sl-tree-item>
+            <a href="#sub-section-8-header-1">8.1. Mold Preparation</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#sub-section-8-header-2">8.2. Prepreg Lay-up</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#sub-section-8-header-3">8.3. Edge Radius Evaluation and Conformity Analysis</a>
+          </sl-tree-item>
+        </sl-tree-item>
+
+        <sl-tree-item>
+          <a href="#section-header-9">9. Conclusion</a>
+        </sl-tree-item>
+
+        <sl-tree-item>
+          <a href="#section-header-9">10. Future Works</a>
+        </sl-tree-item>
+
+        <sl-tree-item>
+          <a href="#references">11. References</a>
+        </sl-tree-item>
+
+        <sl-tree-item expanded>
+          <a href="#appendix">12. Appendix</a>
+          <sl-tree-item>
+            <a href="#appendix-sub-1">Appendix A: Data Cleaning Procedure</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#appendix-sub-2">Appendix B: Scatter Plot of 0.2mm, 0.5mm, 1mm
+              and 2mm With Cleaned Data</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#appendix-sub-3">Appendix C: Cost-Benefit Analysis Of the Purchased Silicone</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#appendix-sub-4">Appendix D: Video Footage of 10cm Cube Under Vacuum</a>
+          </sl-tree-item>
+        </sl-tree-item>
+      </sl-tree>
+    </div>
+    <sl-divider></sl-divider>
+    <div>
+      <div id="abstract">
+        <h2>Abstract</h2>
+        <p>
+          This project introduces a sustainable vacuum bagging system that replaces traditional single-use materials
+          with a reusable silicone sheet. Leveraging silicone's high thermal resistance and elongation properties, the
+          system addresses key challenges in in-house composite manufacturing, including cost, waste, time, and skill
+          dependency. Experiments characterized silicone behavior under vacuum, evaluated mold compatibility and edge
+          conformity, and examined the relationship between mold height and curvature. The design was validated through
+          the fabrication of composite heel rest and brake heel rest components for a NUS FSAE race car, demonstrating
+          reduced weight and enhanced performance compared to the conventional 3D printing method they use.
+        </p>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+    <div>
+      <div id="list-of-tables">
+        <h2>List of Tables</h2>
+        <table-component>
+          <div id="table-table"></div>
+        </table-component>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+    <div>
+      <div id="list-of-figures">
+        <h2>List of Figures</h2>
+        <table-component>
+          <div id="table-figure"></div>
+        </table-component>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+    <div>
+      <!-- This is an example of what a section might look like -->
+      <div id="section-header-1">
+        <h2>1. Introduction</h2>
+        <p>
+          Composite material is made from combining two or more different materials with distinct physical or chemical
+          properties to create unique properties such as enhanced strength and reduced weight compared to the original
+          material alone. Composite materials are the product of fiber material, such as carbon, and matrix material,
+          like epoxy resin. Fiber is the key to strength and stiffness, and matrix material acts as a bonding agent,
+          holding the fiber together. (McClements & Lichtig, 2023) One of the commonly used composite materials is
+          carbon fiber.
+        </p>
+        <image-component tag="image" source="assets/composite-material.png"
+          subtitle="Figure 1:  Composition of Composite Materials and Real-Life Application (Sultana, 2023)"></image-component>
+        <br />
+      </div>
+      <div id="sub-section-1-header-1">
+        <h3>1.1. Growing Global Demand For Composite Materials</h3>
+        <p>
+          Recent statistics, shown in Figure 2, show that the market value of composite materials worldwide is projected
+          to increase to 67 billion U.S. dollars in 2031 from 49.3 billion U.S. dollars in 2024. (Lucintel, 2025) Due to
+          the superior strength-to-weight ratio, durability, and design flexibility of composite materials, they are
+          commonly used in transportation (e.g. race cars, aircraft), electronics, and construction market as shown in
+          Figure 3. (AVK, 2025) For example, the main body and the wings of an aircraft can be manufactured using
+          composite material illustrated in Figure 4.
+        </p>
+        <image-component tag="image" source="assets/growing-market.png"
+          subtitle="Figure 2: Growing Market Value of Composite Materials Worldwide (Lucintel, 2025)"></image-component>
+        <br />
+        <image-component tag="image" source="assets/market-composite.png"
+          subtitle="Figure 3: Composite Material Applications Worldwide (AVK, 2025)"></image-component>
+        <br />
+        <image-component tag="image" source="assets/airplane.png"
+          subtitle="Figure 4: Real-life Application of Composite Material (Sultana, 2023)"></image-component>
+        <br />
+      </div>
+      <div id="sub-section-1-header-2">
+        <h3>
+          1.2. Composite Manufacturing In Industry vs. In-House
+        </h3>
+        <p>
+          In large-scale industries such as Boeing, they often manufacture large volumes and large-scale composite
+          parts. Therefore, such large industries use highly advanced and established technologies like automated fiber
+          placement to fabricate their air vehicle structures (Brasington et al., 2021), which is shown in Figure 5
+          below. Automated fiber placement uses a robotic system to lay down strips of fiber material onto the mold of
+          the part that is desired to be manufactured. (Brasington et al., 2021)
+        </p>
+        <image-component tag="image" source="assets/turbine.png"
+          subtitle="Figure 5: Automated Fiber Placement Machine in Industrial Use (George Marsh, 2011)"></image-component>
+        <p>
+          However, as global market value and demand for composite materials increase, composite manufacturing is no
+          longer confined to large-scale industries. Instead, composites are fabricated on a smaller scale and in lower
+          volumes. This is called <i>in-house composite manufacturing</i>. This method typically employs a hand lay-up
+          process,
+          where the technician manually lays composite materials onto a mold, rather than relying on advanced robotic
+          systems. In-house composite manufacturing is favored by markets producing diverse part sizes, lower production
+          volumes, and customized products to meet specific consumer needs. For example, the National University of
+          Singapore Formula SAE team uses composite materials to produce various parts in their race car, as carbon
+          fiber exhibits a high strength-to-weight ratio making it suitable for high-performance race cars. This
+          includes
+          larger structures like the front wing, which is 1.3m x 0.5m x 0.06m (Figure 6), as well as an electronics box
+          which can be as small as 15cm x 15cm x 15cm.
+        </p>
+        <image-component tag="image" source="assets/front-wing-fsae.png"
+          subtitle="Figure 6: Front wing made out of carbon fiber by NUS Formula SAE Team"></image-component>
+      </div>
+      <div id="sub-section-1-header-3">
+        <h3>
+          1.3. Three In-House Composite Manufacturing Processes
+        </h3>
+        <p>
+          There are three major carbon fiber lay-up processes for in-house manufacturing: Wet lay-up, resin transfer
+          molding and prepreg lay-up.<br /><br />Wet lay-up is done by manually applying resin to the layers of dry
+          fiber reinforcement. This requires handling wet resin and ensuring that the resin is evenly distributed with
+          the right amount. (Campbell, 2004)
+        </p>
+        <image-component tag="image" source="assets/wet-lay-up.png" subtitle="Figure 7: Wet lay-up"></image-component>
+        <p>
+          Resin transfer molding uses a resin injection system to inject the resin into a closed mold containing dry
+          carbon fibers. (Jamir et al., 2018)
+        </p>
+        <image-component tag="image" source="assets/resin-transfer.png"
+          subtitle="Figure 8: Resin Transfer Molding"></image-component>
+        <p>
+          Lastly, prepreg lay-up is carbon fiber that has already been coated with a partially hardened resin. Instead
+          of pouring liquid resin onto the carbon fiber by hand, each sheet already has the right amount of resin evenly
+          spread through it. These sheets are carefully placed on top of each other on the mold of the part that you
+          want to produce. Then, once the stack of layers is complete, they’re placed under vacuum and heated (often in
+          an oven) to complete the curing process and is demolded. (Campbell, 2004)
+        </p>
+        <image-component tag="image" source="assets/blue-car.png" subtitle="Figure 9: Prepreg"></image-component>
+        <p>
+          Out of the three carbon fiber layup processes, this project will use prepreg in the subsequent sections of the
+          report. Prepregs offer consistent quality of composite parts as there is a uniform fiber-to-resin ratio and
+          consistent thickness per ply. They are also the easiest ones to handle as it doesn’t use liquid resins and
+          this effectively reduces the curing time since the resin system is already partially cured.
+        </p>
+      </div>
+      <div id="sub-section-1-header-4">
+        <h3>
+          1.4. Using Prepreg To Fabricate A Composite Part
+        </h3>
+        <p>
+          Manufacturing a functional composite part using prepreg involves a series of steps and several auxiliary
+          materials. Table 1 provides a detailed breakdown of the key steps involved in this process.
+        </p>
+        <table-component subtitle="Table 1: Breakdown of the Prepreg Processing Steps">
+          <div id="table-1"></div>
+        </table-component>
+        <p>
+          Figure 10 below shows the entire prepreg lay-up enclosed in a vacuum bag connected with a vacuum fitting. The
+          auxiliary materials needed for this process include:
+        </p>
+        <ul style="font-size: 20px;">
+          <li>Vacuum bagging film</li>
+          <li>Sealant tape</li>
+          <li>Release film</li>
+          <li>Breather fabric</li>
+        </ul>
+        <image-component tag="image" source="assets/orange.png"
+          subtitle="Figure 10: Simplified Diagram Of A Prepreg Lay-up In A Vacuum Bag"></image-component>
+        <p>
+          In real life, the entire assembly looks like Figure 11 below. The prepreg lay-up is enclosed by the yellow
+          vacuum bagging film using yellow sealant tape around it.
+        </p>
+        <image-component tag="image" source="assets/real-bag.png"
+          subtitle="Figure 11: Real-life prepreg layup inside a vacuum bag"></image-component>
+      </div>
+      <div id="sub-section-1-header-5">
+        <h3>
+          1.5. Challenges In Vacuum Bagging Process
+        </h3>
+        <p>
+          Although the vacuum bagging process is a crucial step in any in-house composite manufacturing process, it
+          poses four major challenges:
+        </p>
+        <ul style="font-size: 20px;">
+          <li>Skill dependency</li>
+          <li>Time intensive</li>
+          <li>High cost</li>
+          <li>Environmental impact</li>
+        </ul>
+        <p>
+          The first challenge is that vacuum bagging is a highly skill-dependent process. As the vacuum pump sucks out
+          the air inside, the vacuum bag easily forms folds on the lay-up, especially for deep corners and complex
+          shapes. These folds are very critical as they can lead to inconsistent vacuum pressure, resulting in bridging,
+          voids, or pinholes that can compromise the strength and quality of the final composite part. Therefore, a
+          proper pleating process is required by the technician when vacuuming the bag to ensure that it’s fully
+          conformed to the mold, including deep corners. This increases the complexity of the process and increases the
+          demand for skilled labor, making it a challenging method for less experienced technicians to perform.
+          <br /><br />
+          The second challenge is the time intensity of the process. Because there are several steps involved in the
+          vacuum bagging process such as bagging, sealing and monitoring the conformity of the vacuum bag, this
+          increases the overall production time. This reduces the productivity and efficiency of producing composite
+          parts.
+          <br /><br />
+          The third challenge is the high cost of vacuum bagging materials. For instance, NUS purchases a roll of vacuum
+          bagging film every year which costs $1562 SGD while the sealant tape costs $5.47 SGD per roll. Table 2 shows
+          the specifications of the materials purchased at NUS. Such expenses can add up quickly when the project scale
+          or volume increases.
+        </p>
+        <table-component subtitle="Table 2: Specifications of Vacuum Bagging Film and Sealant Tape Purchased by NUS">
+          <div id="table-2"></div>
+          </p>
+        </table-component>
+        <p>
+          The last challenge is the significant waste produced in the process. The vacuum bagging film, sealant tape,
+          release film, and breather fabric are all disposable materials, leading to substantial waste. Vacuum bagging
+          film typically produces the greatest amount of waste, as it is often cut significantly larger than the mold
+          dimensions to accommodate the required pleating during vacuum application. The film undergoes high plastic
+          deformation when it’s vacuumed, hence it cannot be reused but will be disposed of after a single use. Finding
+          sustainable alternatives or reusable options for these materials would reduce waste and lessen the
+          environmental footprint of composite manufacturing.
+          <br /><br />
+          There is a need for an innovative solution to make vacuum bagging less skill-dependent, more time and
+          cost-efficient, and more environmentally friendly, which would contribute to a more sustainable and seamless
+          approach to the overall composite manufacturing.
+        </p>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+    <div>
+      <div id="section-header-2">
+        <h2>2. Design Statement</h2>
+        <p>
+          Such distinct challenges in the vacuum bagging process lead to the design statement for this project:
+          <br /><br />
+          Designing a vacuum bagging system that reduces cost and environmental impact using a reusable vacuum bag
+          material while simplifying the process to reduce skill dependency, and accelerate the production time while
+          ensuring high-quality composite parts.
+          <br /><br />
+          Hence, the project objectives/milestones are as follows:
+        </p>
+        <image-component tag="image" source="assets/flow.png" subtitle=""></image-component>
+        <p>
+          This project is novel because it employs reusable vacuum bagging material to replace the traditional
+          single-use vacuum bagging materials through an innovative vacuum bagging system. This allows the fabrication
+          of a fully functional composite part while addressing the challenges faced in the traditional vacuum bagging
+          process.
+        </p>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+    <div>
+      <div id="section-header-3">
+        <h2>3. Value Proposition</h2>
+        <p>
+          This project delivers a sustainable alternative to the conventional vacuum bagging process by integrating
+          reusable vacuum bagging materials within a complete reusable vacuum bagging system. By reducing reliance on
+          single-use materials, this approach significantly decreases both cost and waste, while simultaneously lowering
+          skill dependency and accelerating the overall composite manufacturing process.
+
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+    <div>
+      <div id="section-header-4">
+        <h2>4. Finding Reusable Vacuum Bagging Material</h2>
+        <p>
+          This section of the report focuses on identifying a reusable vacuum bagging material.
+        </p>
+      </div>
+      <div id="sub-section-4-header-1">
+        <h3>4.1. Design Specifications For Reusable Vacuum Bagging Material</h3>
+        <p>
+          To establish the design specifications for a reusable vacuum bagging material, the traditional vacuum bagging
+          film SL850’s material property (temperature, elongation, reusability) is used as the benchmark. This is shown
+          in Table 3.
+        </p>
+        <table-component subtitle="Comparative Material Properties of SL850, Rubber, Silicone, and Polyurethane">
+          <div id="table-3"></div>
+        </table-component>
+        <p>Hence, the reusable vacuum bagging material should have the following design specifications:</p>
+        <ul style="font-size: 20px;">
+          <li><strong>Temperature</strong>: Withstand 180°C, as that is the maximum curing temperature in the
+            oven/autoclave</li>
+          <li><strong>Elongation</strong>: Have at least 450% elongation rate at break to achieve high conformity around
+            the lay-up</li>
+          <li><strong>Reusability</strong>: The material can be reused with minimal plastic deformation after being
+            used. Also, it
+            doesn’t get contaminated by resin</li>
+          <li><strong>Accessibility</strong>: Easy to source in Singapore and inexpensive</li>
+          <li><strong>Customizable Size</strong></li>
+          <li><strong>Ideally Translucent</strong></li>
+        </ul>
+        <p>
+          Rubber, silicone, and polyurethane were selected for comparison because they are common, readily available
+          elastomers. Table 3 presents a comparative analysis of the material properties of the benchmark material
+          (SL850) alongside these elastomers.
+          <br /><br />
+          Rubber and polyurethane have maximum temperature tolerances of only 82°C and 93°C, respectively. Those
+          temperatures are below the typical curing conditions, which would lead to their melting during the curing
+          process. Moreover, both materials exhibit plastic deformation when stretched, making them unsuitable for
+          reusable vacuum bagging applications
+          <br /><br />
+          In contrast, silicone can endure temperatures up to 315°C and, depending on its thickness, can achieve
+          elongation of up to 1490%. Consequently, <strong>silicone</strong> was selected as the most reusable vacuum
+          bagging material.
+        </p>
+      </div>
+      <div id="sub-section-4-header-2">
+        <h3>
+          4.2. Sourcing And Purchasing Of Silicone Sheet
+        </h3>
+        <p>
+          The reusable vacuum bagging material should be readily accessible within Singapore to avoid dependency on
+          limited suppliers, thereby minimizing potential delays in the composite manufacturing process.
+          <br /><br />
+          In Singapore, two prominent global distributors, RS Components and Misumi, provide industrial and electronic
+          products. Figure 12 illustrates three types of silicone sheets offered by RS Components, starting at S$110.06,
+          with prices increasing for thicker options. This pricing fails to meet the design specification, as it is
+          expensive and would counteract the cost-saving objective of the project.
+        </p>
+        <image-component tag="image" source="assets//silicone-rs-components.png"
+          subtitle="Figure 12: Silicones in RS Components"></image-component>
+        <p>
+          More affordable silicone sheet options are available through online platforms such as Aliexpress, presenting
+          an opportunity to substantially reduce composite manufacturing costs. There are numerous suppliers on
+          Aliexpress that offer silicone sheets in various thicknesses.
+          <br /><br />
+          Using the SL850 vacuum bagging film, which has a thickness of 0.05 mm, as a benchmark, silicone sheets with
+          thicknesses of 0.2 mm, 0.5 mm, 1 mm, and 2 mm were purchased from Aliexpress. This diverse range of
+          thicknesses will facilitate data-driven decision-making by allowing elongation measurements to determine the
+          most suitable silicone for vacuum bagging applications. Figure 13 illustrates the silicone sheets purchased
+          from Aliexpress, including their respective prices.
+        </p>
+        <image-component tag="image" source="assets//purchased-silicones.png"
+          subtitle="Figure 12: Silicones in RS Components"></image-component>
+        <p>
+          Find Appendix C for the cost-benefit analysis of using silicone sheet instead of vacuum bagging film.
+        </p>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+    <div>
+      <div id="section-header-5">
+        <h2>
+          5. ASTM D412 Experiment With Silicone
+        </h2>
+        <p>
+          A limitation when purchasing silicone sheets from Aliexpress is the potential unreliability of their stated
+          elongation specifications, as these values are typically not verified by established sources.
+          <br /><br />
+          Therefore, it is necessary to measure their elongation rate and analyze their mechanical behavior to assess
+          their suitability for vacuum bagging applications. ASTM D412 was used as a guideline to conduct this
+          assessment.
+          <br /><br />
+          ASTM D412 is a standard test method established by ASTM International for determining the tensile properties
+          of rubber and elastomers, which can be used for measuring key mechanical properties such as tensile strength,
+          elongation at break, and stress-strain behavior under uniaxial tensile loading. (Standard Test Methods for
+          Vulcanized Rubber and Thermoplastic Elastomers—Tension, 2021) It uses dogbone-shaped specimens in the test.
+      </div>
+      <div id="sub-section-5-header-1">
+        <h3>
+          5.1. Cost-Benefit Analysis Of The Purchased Silicone
+        </h3>
+        <p>
+          Assess the suitability of silicone for vacuum bagging by measuring its elongation properties and identifying
+          the appropriate material thickness.
+        </p>
+      </div>
+      <div id="sub-section-5-header-2">
+        <h3>
+          5.2. Cost-Benefit Analysis Of The Purchased Silicone
+        </h3>
+        <p>
+          <i>The silicone’s elongation will meet the design specifications for reusable vacuum bagging material, while
+            thinner specimens will elongate more than thicker specimens with less force required.</i>
+          <br /><br />
+          This hypothesis was established based on the known mechanical properties of silicone elastomers, which are
+          characterized by high elasticity and the ability to undergo significant elongation without permanent
+          deformation.
+          <br /><br />
+          Furthermore, principles of material mechanics suggest that thinner specimens generally require less force to
+          achieve the same level of elongation compared to thicker ones due to their reduced cross-sectional area and
+          lower resistance to tensile forces.
+        </p>
+      </div>
+      <div id="sub-section-5-header-3">
+        <h3>
+          5.3. Experiment Preparation
+        </h3>
+        <p>
+          These are some essential preparation steps for the experiment:
+        </p>
+        <ol>
+          <li>
+            <strong>Creating a CAD drawing of the ASTM D412 Type C dogbone specimen</strong>
+            <br />
+            This ensures that the experiment uses standardized dimensions required for tensile testing, ensuring
+            consistency with ASTM specifications. Figure 14 shows the CAD drawing done on Solidworks.
+          </li>
+          <image-component tag="image" source="assets/cad-specimen.png"
+            subtitle="Figure 14: CAD Drawing Of The Specimen"></image-component>
+          <br />
+          <li>
+            <strong>Fabrication of the specimen template</strong>
+            <br />
+            The CAD drawing was laser cut to produce the acrylic template of the specimen. This is needed to trace cut
+            the silicone sheet.
+          </li>
+          <image-component tag="image" source="assets/acrylic-template.png"
+            subtitle="Figure 15: Acrylic Template Of Specimens"></image-component>
+          <br />
+          <li>
+            <strong>Cutting Out Silicone Specimens</strong>
+            <br />
+            The acrylic template was placed onto the purchased silicone sheets. Using a scalpel knife, the silicone
+            sheet was carefully traced and cut according to the template. See Figure 16. A total of 16 silicone
+            specimens were prepared, with four specimens for each thickness category tested.
+          </li>
+          <image-component tag="image" source="assets/silicone-specimen.png"
+            subtitle="Figure 16: Silicone Specimens"></image-component>
+        </ol>
+      </div>
+      <div id="sub-section-5-header-4">
+        <h3>
+          5.4. Experiment Procedure
+        </h3>
+        <p>
+          An Instron 34TM-5 universal testing machine was used to conduct the tensile tests on the silicone specimens.
+          The machine was configured with a grip-to-grip separation of 33 mm and a gauge length of 25 mm to accommodate
+          the standardized specimen dimensions. Grip pressure was maintained at 100 psi (689 kPa) to ensure secure
+          holding of the specimens without causing premature failure or slippage during testing. The tests were
+          performed at a speed of 500 ± 50 mm/min, adhering to the guidelines specified in ASTM D412.
+          <br /><br />
+          Each silicone specimen was elongated until it broke to determine the material's ultimate elongation and
+          tensile strength. See Figure 17 for a video footage of the testing for one of the specimens.
+        </p>
+        <video-component tag="elongation" source="assets/elongation.mp4"
+          subtitle="Figure 17: Video footage of a silicone specimen elongating until break"></video-component>
+      </div>
+      <div id="sub-section-5-header-5">
+        <h3>
+          5.5. Experiment Results And Analysis
+        </h3>
+        <p>
+          During the experiment, the machine collected multiple displacement readings for the same force value,
+          resulting in a one-to-many relationship between force and displacement data points. Therefore, data cleaning
+          was performed to establish a one-to-one mapping between force and displacement. See Appendix A for the data
+          cleaning method.
+          <br /><br />
+          Figure 18 shows the compiled scatter plot of all 13 specimens. Three 0.2mm specimens slipped off from the
+          machine grip, hence they are not included in the graph. The plot shows that 0.5mm thickness elongates the most
+          with the least force required to stretch to that point. This can be seen by the orange line that stretches the
+          furthest. 2mm (purple) and 1.5mm both broke at similar elongation. However, 2mm (green) requires greater force
+          to elongate. There is a clear trend where thicker specimens require more force to reach similar displacement
+          values. The 2.0 mm specimen, represented in purple, shows the highest force values for a given displacement,
+          followed by the 1.0 mm, 0.5 mm, and 0.2 mm specimens. Thinner specimens (0.2 mm) reach higher displacements at
+          much lower forces, indicating greater flexibility but lower strength compared to thicker specimens.
+        </p>
+        <image-component tag="image" source="assets/specimen-displacement.png"
+          subtitle="Figure 18: Combined Scatter Plot For All Specimens Showing Elongation At Break (mm) And Tensile Strength (kN)"></image-component>
+        <p>
+          See Appendix B for the individual scatter plot per thickness.
+          <br /><br />
+          Table 4 summarizes the experiment results. 0.5 mm specimen has the highest elongation at break (301 mm) and
+          percentage elongation (1200%), indicating it can stretch the most before breaking. This suggests an optimal
+          balance of flexibility and strength for this thickness. The 0.2 mm specimen shows significant elongation (167
+          mm, 668%), but due to its low force threshold (0.0066 kN), it is less resistant to higher forces, making it
+          weaker than the thicker specimens. The 1.0 mm and 2.0 mm specimens exhibit reduced elongation percentages
+          (760% and 716%, respectively) but can withstand higher forces (0.0324 kN and 0.06055 kN, respectively),
+          indicating greater strength than 0.2mm.
+        </p>
+        <table-component
+          subtitle="Table 4: Average Elongation at Break and Tensile Strength for Different Silicone Thicknesses">
+          <div id="table-4"></div>
+        </table-component>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+    <div>
+      <div id="section-header-6">
+        <h2>6. Concept Design</h2>
+        <p>
+          The following part of the project is designing a reusable vacuum bagging system using a silicone sheet.
+        </p>
+      </div>
+      <div id="sub-section-6-header-1">
+        <h3>
+          6.1. Concept Design Generation
+        </h3>
+        <p>
+          The initial stage of this concept design centers on substituting the traditional vacuum bagging film with a
+          reusable silicone sheet.
+          <br /><br />
+          Based on the results of previous elongation experiments, the reusable vacuum bagging system will utilize
+          silicone sheets with thicknesses of 0.5 mm and 1.0 mm, as these options exhibited the highest elongation
+          values.
+          <br /><br />
+          Table 5 shows the traditional vacuum bagging layout and the proposed layout. The traditional layout relies on
+          sealant tape and vacuum bagging film to create an enclosed environment over the prepreg layup on an aluminum
+          plate. The vacuum port is connected to the top of the vacuum bag. By contrast, the proposed layout replaces
+          both the sealant tape and disposable vacuum film with a silicone sheet. This change directly addresses the
+          goal of reducing material waste by eliminating two major disposable items in the traditional vacuum bagging
+          process.
+        </p>
+        <table cellpadding="10" border>
+          <tr>
+            <td><strong>Before</strong> <i>(Traditional vacuum bagging layout)</i></td>
+            <td><img src="./assets/before-traditional-vacuum.png" alt="Image 1" width="650"></td>
+          </tr>
+          <tr>
+            <td><strong>After</strong> <i>(Silicone vacuum bagging layout)</i></td>
+            <td><img src="./assets/after.png" alt="Image 2" width="650"></td>
+          </tr>
+        </table>
+        <p style="text-align:center; font-size: 18px; font-style: italic;">Table 5: Vacuum Bagging Layouts: Traditional
+          vs. Silicone Vacuum Bagging System</p>
+        <p>
+          However, this change in the vacuum bagging layout introduces two major design challenges that must be
+          addressed.
+          <br /><br />
+          <ins>Challenge 1: Sealing The Prepreg Layup Without Sealant Tape</ins>
+          <br />
+          In the traditional approach, sealant tape holds the vacuum bagging film securely against the aluminum plate,
+          ensuring no air can leak into the vacuum space. Eliminating the sealant tape in the proposed silicone vacuum
+          bagging layout means the silicone sheet must still form a tight seal against the plate, but without relying on
+          a single-use adhesive. This requirement precludes any sealing method that involves bolting or perforating the
+          silicone, as creating holes in the sheet would lead to tearing under tension.
+          <br /><br />
+          <ins>Challenge 2: Vacuum Port Placement</ins>
+          <br />
+          In traditional vacuum bagging, the vacuum hose is connected through the bagging film using a small fitting
+          from the top of the bag, shown in Figure 19. This is done by cutting or punching a hole in the plastic film so
+          air can be sucked out. However, in the new layout that uses a silicone sheet, creating a hole in the silicone
+          sheet would cause the whole silicone sheet to tear under vacuum pressure. This compromises the reusability. As
+          a result, the vacuum port must be relocated to preserve the silicone sheet’s integrity.
+        </p>
+        <image-component tag="image" source="assets/vacuum-hose.png"
+          subtitle="Figure 19: Vacuum Hose Location in Traditional Layout (Laminating with Pre-Pregs, 2020)"></image-component>
+        <p>
+          Therefore, the complete vacuum bagging system should address these challenges while accommodating the silicone
+          sheet.
+          <br /><br />
+          The concept design for the reusable vacuum bagging system was inspired by the principles of vacuum forming
+          machines. In vacuum forming, a heated plastic sheet is drawn over a mold by applying vacuum pressure, causing
+          the sheet to conform to the mold’s contours, as illustrated in Figure 20. The machine consists of a top frame
+          and a bottom frame, which are clamped together with the mold positioned in between. As air is evacuated from
+          the bottom of the frame, the heated plastic is pressed firmly against the mold, resulting in precise
+          conformation to its shape.
+        </p>
+        <image-component tag="image" source="assets/vacuum-forming.png"
+          subtitle="Figure 20: Vacuum Forming Machine"></image-component>
+      </div>
+      <div id="sub-section-6-header-2">
+        <h3>
+          6.2. Final Concept Design
+        </h3>
+        <p>
+          The final concept design for the silicone vacuum bagging system is illustrated in Figure 21. This
+          system features two identical square frames connected by hinges, allowing them to open and close. The prepreg
+          layup is placed on an aluminum plate, which is bolted to the bottom frame to enhance the overall integrity of
+          the system. Once the layup is positioned, the frames are clamped shut, enabling the silicone sheet to cover
+          and conform to the prepreg layup as air is evacuated, thus consolidating the composite structure. The four
+          legs elevate the frame assembly to allow the vacuum port to be located below the aluminium profile.
+        </p>
+        <image-component tag="elongation" source="assets/final-concept-design.png"
+          subtitle="Figure 21: Final Concept Design"></image-component>
+        <p>
+          All the frames and legs are built using aluminum T-slot profiles due to their versatility, good resistance to
+          high curing temperature, and its ease of sourcing. Specifically, this project uses Prestech’s 30 series
+          aluminium profiles to ensure the stability of the system.
+        </p>
+      </div>
+      <div id="sub-section-6-header-3">
+        <h3>
+          6.3. How The Final Concept Design Addresses The Two Challenges
+        </h3>
+        <p>
+          For the first challenge, two ideas were considered, which is shown in Table 5.
+        </p>
+        <image-component tag="beamy" source="assets/beam-table.png"
+          subtitle="Table 6: Two Possible Ideas to Address Sealing Problem"></image-component>
+        <p>
+          Idea 2 was chosen as it is a reliable clamping mechanism and it can withstand the curing temperature. Figure
+          22 below shows how this was incorporated in the actual frame assembly.
+        </p>
+        <image-component tag="beamy" source="assets/clamping.png"
+          subtitle="Figure 22: Clamping Silicone On The Upper Frame"></image-component>
+        <p>
+
+        </p>
+        <image-component tag="beamy" source="assets/closing.png"
+          subtitle="Figure 23: Vacuum Port Location"></image-component>
+      </div>
+      <div id="sub-section-6-header-4">
+        <h3>
+          6.4. Design Specification Of The Chosen Concept Design
+        </h3>
+        <table-component subtitle="Table 7: Design Specification of the Proposed Vacuum Bagging System">
+          <div id="table-7"></div>
+        </table-component>
+      </div>
+      <div id="sub-section-6-header-4">
+        <h3>
+          6.5. Fully Assembled Silicone Vacuum Bagging System
+        </h3>
+        <image-component tag="elongation" source="assets/assembled.png"
+          subtitle="Figure 24: Fully Assembled Vacuum Bagging System With Silicone Sheet"></image-component>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+    <div>
+      <div id="section-header-7">
+        <h2>7. Cost Benefit Analysis of the Purchased Silicone</h2>
+        <p>
+          This section of the report presents a series of vacuuming tests conducted using the frame system and silicone
+          sheet, which examines mold compatibility and how the silicone behaves for extreme edges and angles.
+        </p>
+      </div>
+      <div id="sub-section-7-header-1">
+        <h3>7.1. Test 1: Mold Compatibility for Silicone Vacuum Bagging</h3>
+        <p>
+          In the traditional vacuum bagging process, either male or female mold can be used to lay-up composites.
+          However, in the silicone vacuum bagging system, only male molds are feasible because the silicone cannot
+          conform to the interior surfaces of a female mold. To illustrate, a roll of tape, representing a female mold
+          due to its hollow interior, was vacuumed in this frame assembly. See Figure 25. When the vacuum is applied,
+          the silicone fails to conform to the inner surface and instead stops near the top of the tape. It also
+          compromised the silicone sheet, showing plastic deformation. This observation indicates that the silicone
+          vacuum bagging system is limited to male molds, where the silicone can properly conform to the mold’s
+          exterior surface.
+        </p>
+        <image-component tag="elongation" source="assets/big-photo.png"
+          subtitle="Figure 25: Vacuuming A Roll Of Tape (Representing a Female Mold)"></image-component>
+      </div>
+      <div id="sub-section-7-header-2">
+        <h3>7.2. Test 2: Examining How Sharp Edges (Non-Concave) Behave Under Vacuum</h3>
+        <p>
+          This test examines how the silicone sheet conforms to the mold with 90-degree edges under vacuum conditions.
+          <br /><br />
+          For this test, a rectangular block sample (13cm x 6cm x 3cm) was vacuumed. See Figure 26. From simple
+          observation, the silicone sheet conformed to the mold very well in general. The silicone creates a radius
+          along the aluminium sheet, which is circled in yellow. This behavior is inevitable because the system is not
+          designed for pleating, but to naturally conform to the mold under vacuum conditions. In the current block
+          sample, the curvature does not compromise the overall quality of the vacuum bag, as the silicone sheet
+          maintains contact with all surfaces exposed to the vacuum. However, along the lower edges where the block
+          contacts the aluminum plate, there is a small area where the silicone may not fully engage with the block,
+          which prompted the development of Test 3.
+        </p>
+        <image-component tag="elongation" source="assets/rectangular-block.png"
+          subtitle="Figure 26: Vacuuming A Rectangular Block"></image-component>
+      </div>
+      <div id="sub-section-7-header-3">
+        <h3>7.3. Test 3: Evaluating Mold Height And Radius Formation Across Different Sample Dimensions</h3>
+        <p>
+          There is an inherent limitation in the dimensions that the frame system can accommodate, as the frames must be
+          able to clamp together effectively. In the previous test, the rectangular block conformed well under vacuum
+          conditions, although a small radius was observed at the bottom edges. This observation suggests that as the
+          height of the vacuumed part increases, the frames may not be able to fully close, and a correlation might
+          exist between the part's height and the curvature (radius) produced under vacuum. Therefore, this test
+          examines the maximum allowable mold height that the system can accommodate and investigates the relationship
+          between the part's height and the resulting radius under vacuum conditions.
+          <br /><br />
+          For this test, four different-sized cubes were used:
+        </p>
+        <ol>
+          <li>15cmx15cmx15cm</li>
+          <li>10cmx10cmx10cm</li>
+          <li>8.5cmx8.5cmx8.5cm</li>
+          <li>5cmx5cmx5cm</li>
+        </ol>
+        <p>
+          The largest cube sample, measuring 15 cm, prevented the frames from fully closing when positioned between
+          them. This is shown in Figure 27. This indicates that the frame system is limited to accommodating composite
+          layouts with a height below 15 cm. This result establishes the system’s upper-dimensional limit on the mold
+          height.
+        </p>
+        <image-component tag="elongation" source="assets/too-big.png"
+          subtitle="Figure 27: 15cm Cube Unable To Close Frames"></image-component>
+        <p>
+          A 10cm cube was successfully clamped. However, vacuum application resulted in a notably large radius at the
+          bottom edge. See Figure 28. Furthermore, variations in the curvature were observed along different edges, with
+          the edge near the vacuum port exhibiting a larger radius than the edge further away. Similar vacuum tests were
+          performed on 8.5 cm and 5 cm cubes. Find Appendix D for the video footage of 10cm cube under vacuumm.
+        </p>
+        <image-component tag="fig-28" source="assets/10cm.png"
+          subtitle="Figure 28: 10cm Cube Under Vacuum Forming A Radius"></image-component>
+        <br />
+        <image-component tag="fig-29" source="assets/8.5cm.png"
+          subtitle="Figure 29: 8.5cm Cube Under Vacuum Forming A Radius"></image-component>
+        <br />
+        <image-component tag="fig-30" source="assets/5cm.png"
+          subtitle="Figure 30: 5cm Cube Under Vacuum Forming A Radius"></image-component>
+        <p>
+          To establish the relationship between the cube's height and the induced curvature, the distance from the top
+          of the cube to the point at which the curvature begins was measured using a vernier caliper. Figure 31
+          illustrates the specific measurements that were recorded. The data is recorded in Table 8 and plotted in
+          Figure 32.
+        </p>
+        <image-component tag="fig-31" source="assets/edge-radius.png"
+          subtitle="Figure 31: Measuring The Radius On the Edges"></image-component>
+        <br />
+        <image-component tag="table-8" source="assets/records.png"
+          subtitle="Table 8: Data Of The Recorded Lengths as Illustrated in Figure 31"></image-component>
+        <br />
+        <image-component tag="fig-32" source="assets/cube-height.png"
+          subtitle="Figure 32: Scatter Plot Of Green Length (cm) Against The Original Cube Height (cm)"></image-component>
+        <p>
+          According to Figure 32, the experimental data indicate a positive correlation between the height of the cube
+          and the magnitude of the curvature created during vacuum bagging. In other words, as the height of the cube
+          increases, the measured radius of the concave formed by the silicone also increases. This result implies that
+          the silicone may have limitations in achieving a tight seal on taller geometries.
+        </p>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+    <div>
+      <div id="section-header-8">
+        <h2>8. Fabricating A Composite Prototype Using Silicone Vacuum Bagging</h2>
+        <p>
+          A fully functional composite prototype was fabricated to validate the silicone vacuum bagging system. In this
+          project, heel rest and brake heel rest components were selected for lay-up. Heel rests, which secure the
+          driver's side-to-side movement during races, are essential components in a race car, also utilized by the NUS
+          FSAE team. The NUS FSAE team traditionally employs 3D printing with ABS material to make them, shown in
+          Figures 33 and 34 below. However, by using carbon fiber, which has a high strength-to-weight ratio, the
+          overall weight of the vehicle can be reduced while simultaneously enhancing its performance.
+        </p>
+        <image-component tag="fig-33" source="assets/heel-rest.png" subtitle="Figure 33: Heel Rest"></image-component>
+        <br />
+        <image-component tag="fig-34" source="assets/brake-heel.png"
+          subtitle="Figure 34: Brake Heel Rest"></image-component>
+      </div>
+      <div id="sub-section-8-header-1">
+        <h3>8.1. Mold Preparation</h3>
+        <p>
+          As shown in Test 1 of Section 7.1, the silicone sheet is unable to conform to interior surfaces. Hence, the
+          original design is unsuitable as a lay-up mold for components where the inner surface geometry is critical.
+          Consequently, both designs were revised to incorporate male molds, as shown in Figures 35 and 36 below. These
+          molds were 3D printed using ABS material, which was selected for its capacity to withstand the required curing
+          temperatures.
+        </p>
+        <image-component tag="fig-35" source="assets/heel-rest-male.png"
+          subtitle="Figure 35: Heel Rest Revised As A Male Mold"></image-component>
+        <br />
+        <image-component tag="fig-36" source="assets/brake-heel-male.png"
+          subtitle="Figure 36: Brake Heel Rest Revised As A Male Mold"></image-component>
+        <p>
+          Due to the curvature created by the silicone sheet against the aluminum plate under vacuum (as detailed in
+          Sections 7.2 and 7.3), additional allowances were incorporated into the mold design. The prepreg lay-up is
+          applied over these allowances so that, upon curing, the excess material in these areas can be trimmed away,
+          ensuring that only the required portion of the part is retained. This process is illustrated in Figure 37.
+        </p>
+        <image-component tag="fig-37" source="assets/annotate-mold.png"
+          subtitle="Figure 37: Annotated Mold Diagram For Brake Heel Rest."></image-component>
+        <p>The green area indicates the portion to be retained, while the red area represents the excess part that will
+          be trimmed and removed.</p>
+        <image-component tag="fig-38" source="assets/printed-mold.png"
+          subtitle="Figure 38: 3D-printed Molds (ABS material) For Heel Rest And Brake Heel Rest"></image-component>
+      </div>
+      <br />
+      <div id="sub-section-8-header-2">
+        <h3>8.2. Prepreg Lay-up</h3>
+        <p>
+          Five plies of prepreg were applied to each mold. A release film was then placed above the prepreg to
+          facilitate demolding, and a breather fabric was applied to ensure uniform vacuum airflow. The complete lay-up
+          was subsequently transferred to an autoclave and cured at 85°C for six hours. Figure 39 illustrates the
+          pre-cure lay-up.
+        </p>
+        <image-component tag="fig-39" source="assets/prepreg.png"
+          subtitle="Figure 39: Prepreg Lay-up For Heel Rest And Brake Heel Rest (pre-cure)"></image-component>
+        <br />
+        <image-component tag="fig-40" source="assets/demolded.png"
+          subtitle="Figure 40: Demolded Lay-up After Curing For 6 Hours"></image-component>
+      </div>
+      <br />
+      <div id="sub-section-8-header-3">
+        <h3>8.3. Edge Radius Evaluation And Conformity Analysis</h3>
+        <p>
+          If the silicone sheet conforms to the lay-up successfully, the radius of the bottom edges of the final part
+          should be at least the same or even smaller than the pre-cure radius of the prepreg lay-up. Therefore, their
+          radius was measured using the same testing method as in Figure 31.
+        </p>
+        <image-component tag="fig-41" source="assets/green-annotate.png"
+          subtitle="Figure 41: The Green Annotated Length Was Measured For The Final Composite Part And The Pink Annotated Length Was Measured For The Pre-Cure Radius"></image-component>
+        <br />
+        <image-component tag="image" source="assets/table-9.png"
+          subtitle="Table 9: The Measured Green Lengths And Pink Lengths From Figure 41"></image-component>
+        <p>
+          According to Table 9, the pink length—which represents the radius of the pre-cure part—is smaller than the
+          green length, which corresponds to the radius of the final composite part. This finding indicates that the
+          silicone sheet conformed tightly to the lay-up, thereby minimizing bridging and void formation in the
+          manufactured composite part.
+          <br /><br />
+          The successful fabrication of the heel rest and brake heel rest components validates that the integrated
+          silicone vacuum bagging system is effective for manufacturing these critical composite parts. This validation
+          not only highlights the system's capability to produce high-performance, lightweight components for
+          applications such as the NUS FSAE race car but also underscores its potential to streamline the manufacturing
+          process by reducing reliance on single-use materials, thereby offering both economic and environmental
+          benefits. Table 10 shows the reduction of the mass (g) when it is manufactured using prepreg.
+
+        </p>
+        <image-component tag="image" source="assets/table-10.png"
+          subtitle="Table 10: Decrease In Mass When Shifting From ABS Material To Prepreg"></image-component>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+    <div id="section-header-9">
+      <h2>9. Conclusion</h2>
+      <p>
+        This project demonstrates the feasibility of a novel, sustainable vacuum bagging system that employs a reusable
+        silicone sheet as an alternative to the traditional single-use vacuum bagging films and sealant tapes. By
+        leveraging silicone’s superior thermal stability and high elongation properties, the developed vacuum bagging
+        system not only reduces material waste and production costs but also minimizes the skill dependency typically
+        associated with manual vacuum bagging processes.
+        <br /><br />
+        Experimental testing with the system, including assessments of mold compatibility, edge conformity, and the
+        relationship between mold height and curvature under vacuum conditions, gives meaningful insights into the high
+        conformity of silicone under vacuum as well as the limitations of the system.
+        <br /><br />
+        The fabrication of composite prototypes, specifically the heel rest and brake heel rest components for the NUS
+        FSAE race car, validates the system's capability to produce high-quality, lightweight composite parts. These
+        results underscore the potential of the silicone vacuum bagging system to streamline in-house composite
+        manufacturing while enhancing overall performance and sustainability.
+
+      </p>
+    </div>
+
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+    <div id="section-header-10">
+      <h2>10. Future Work</h2>
+      <p>
+        Future work should aim at assessing the long-term reusability of the silicone vacuum bagging material.
+        Specifically, it is critical to determine whether the radius of the silicone, which plays a key role in ensuring
+        proper conformity and vacuum integrity, changes over repeated use. Such variations could arise from gradual
+        material fatigue, plastic deformation, or slight changes in the silicone's elastic properties over multiple
+        curing cycles.
+        <br /><br />
+        In addition, the effect of part orientation on the formation of the concave during vacuum bagging should be
+        investigated to further refine the system's design for various composite geometries. Since the orientation may
+        impact how the silicone conforms to the mold, potentially leading to variations in curvature and void formation.
+        The insights gained from these studies will be instrumental in refining the system's design, ensuring consistent
+        performance and quality across a range of composite manufacturing applications.
+      </p>
+    </div>
+
+    <!-- This is an example of how you can use the references component to create references -->
+    <div id="references" class="references">
+      <sl-divider></sl-divider>
+      <h2>References</h2>
+      <ul>
+        <li>AVK. (February 29, 2024). Market share of composite materials worldwide in 2023, by application [Graph]. In
+          Statista. Retrieved April 05, 2025, from <a
+            href="https://www-statista-com.libproxy1.nus.edu.sg/statistics/1472710/global-composite-materials-market-share-by-application/">https://www-statista-com.libproxy1.nus.edu.sg/statistics/1472710/global-composite-materials-market-share-by-application/</a>
+        </li>
+
+        <li>ADVANCED MATERIALS GROUP. (2005). <a
+            href="https://www.freemansupply.com/datasheets/Airtech/stretchlon.pdf">https://www.freemansupply.com/datasheets/Airtech/stretchlon.pdf</a>
+        </li>
+
+        <li>Addcomposites. “What Is Automated Fibre Placement (AFP)?” Addcomposites, 7 Mar. 2021, <a
+            href="https://www.addcomposites.com/post/what-is-automated-fibre-placement-afp">www.addcomposites.com/post/what-is-automated-fibre-placement-afp</a>
+        </li>
+
+        <li>Brasington, A., Sacco, C., Halbritter, J., Wehbe, R., & Ramy Harik. (2021). Automated fiber placement: A
+          review of history, current technologies, and future paths forward. *Composites Part C: Open Access, 6*,
+          100182. <a href="https://doi.org/10.1016/j.jcomc.2021.100182">https://doi.org/10.1016/j.jcomc.2021.100182</a>
+        </li>
+
+        <li>Campbell, F. C. (2004). Commercial Composite Processes. In *Elsevier EBooks* (pp. 399–438). <a
+            href="https://doi.org/10.1016/b978-185617415-2/50012-5">https://doi.org/10.1016/b978-185617415-2/50012-5</a>
+        </li>
+
+        <li>Carbon, D. (2020, August 8). IMEE Made. IMEE Made. <a
+            href="https://imeemade.com/blog/diy-carbon-fiber-onewheel-fender">https://imeemade.com/blog/diy-carbon-fiber-onewheel-fender</a>
+        </li>
+
+        <li>Elkington, M., Bloom, D., Ward, C., Chatzimichali, A., & Potter, K. (2015). Hand layup: Understanding the
+          manual process. *Advanced Manufacturing: Polymer & Composites Science, 1*(3), 138–151. <a
+            href="https://doi.org/10.1080/20550340.2015.1114801">https://doi.org/10.1080/20550340.2015.1114801</a></li>
+
+        <li>George Marsh. (2011). Automating aerospace composites production with fibre placement. *Reinforced Plastics,
+          55*(3), 32–37. <a
+            href="https://doi.org/10.1016/S0034-3617(11)70075-3">https://doi.org/10.1016/S0034-3617(11)70075-3</a></li>
+
+        <li>Instructables. (2014, August 11). Vacuum Former at Home. In Instructables. <a
+            href="https://www.instructables.com/Vacuum-Former-at-Home/">https://www.instructables.com/Vacuum-Former-at-Home/</a>
+        </li>
+
+        <li>Jamir, M. R. M., Majid, M. S. A., & Azduwin Khasri. (2018). Natural lightweight hybrid composites for
+          aircraft structural applications. In *Elsevier EBooks* (pp. 155–170). <a
+            href="https://doi.org/10.1016/b978-0-08-102131-6.00008-6">https://doi.org/10.1016/b978-0-08-102131-6.00008-6</a>
+        </li>
+
+        <li>Laminating with Pre-pregs. (2020, January 3). In Explore Composites! <a
+            href="https://explorecomposites.com/articles/lamination/basics-laminating-with-pre-pregs/">https://explorecomposites.com/articles/lamination/basics-laminating-with-pre-pregs/</a>
+        </li>
+
+        <li>Lucintel. (May 31, 2024). Market value of composite materials worldwide in 2019 and 2024 with a forecast for
+          2031 (in billion U.S. dollars) [Graph]. In Statista. Retrieved April 05, 2025, from <a
+            href="https://www-statista-com.libproxy1.nus.edu.sg/statistics/944471/global-market-value-of-composites/">https://www-statista-com.libproxy1.nus.edu.sg/statistics/944471/global-market-value-of-composites/</a>
+        </li>
+
+        <li>McClements, D., & Lichtig, A. (2023, May 16). What is Composite Material? Xometry.com; Xometry. <a
+            href="https://www.xometry.com/resources/3d-printing/composite/">https://www.xometry.com/resources/3d-printing/composite/</a>
+        </li>
+
+        <li>Sloan, J. (2025, March 31). In-house prepregging: Cost/benefit calculus. Compositesworld.com;
+          CompositesWorld. <a
+            href="https://www.compositesworld.com/articles/(597)">https://www.compositesworld.com/articles/(597)</a>
+        </li>
+
+        <li>Standard Test Methods for Vulcanized Rubber and Thermoplastic Elastomers—Tension. (2021). ASTM.org. <a
+            href="https://store.astm.org/d0412-16r21.html">https://store.astm.org/d0412-16r21.html</a></li>
+
+        <li>Sultana, M. (2023, June 4). Exploring various matrix composites - Masrath Sultana. Medium. <a
+            href="https://masrath-sultana.medium.com/exploring-various-matrix-composites-3719e4af7d1c">https://masrath-sultana.medium.com/exploring-various-matrix-composites-3719e4af7d1c</a>
+        </li>
+
+        <li>“The Definitive Guide to ASTM D412 Tensile Testing of Elastomers.” Instron.com, 2024, <a
+            href="https://www.instron.com/en/testing-solutions/astm-standards/astm-d412">https://www.instron.com/en/testing-solutions/astm-standards/astm-d412</a>
+        </li>
+      </ul>
+
+    </div>
+
+    <div id="appendix">
+      <sl-divider></sl-divider>
+      <h2>Appendix</h2>
+      <div id="appendix-sub-1">
+        <h3>Appendix A: Data Cleaning Procedure</h3>
+        <p>
+          During the experiment, the testing machine collected
+          multiple displacement readings for the same force value,
+          resulting in a one-to-many relationship between force
+          and displacement data points. For example, at a force of
+          0.001 kN, several displacement measurements were
+          recorded. When plotted, this data produced a graph (see
+          Appendix Figure 1) that made it difficult to determine the
+          elongation at specific force levels.
+        </p>
+        <image-component tag="image" source="assets/appendix-a.png"
+          subtitle="Appendix Figure 1: Scatter plot for 0.2mm before data cleaning"></image-component>
+        <p>
+          To resolve this issue, data cleaning was performed to
+          establish a one-to-one mapping between force and
+          displacement. The following steps were taken:
+          <br />
+          <br />
+          1. <ins>Identify the Failure Point</ins>: The point at
+          which each specimen failed was identified in the
+          dataset.
+          <br />
+          <br />
+          2. <ins>Sort Force Data</ins>: Force values were sorted
+          in ascending order from 0 N up to the failure point for
+          each specimen.
+          <br />
+          <br />
+          3. <ins>Generate New Force Dataset</ins>: A new set of
+          force values was created, starting from 0 N with
+          increments of 0.0001 kN.
+          <br />
+          <br />
+          4. <ins>Average Displacement Values</ins>: For each
+          force value in the new dataset, the average displacement
+          was calculated from the multiple displacement readings
+          corresponding to that force. This ensured a one-to-one
+          correspondence between force and displacement.
+          <br />
+          <br />
+          5. <ins>Use Raw Data Beyond Failure Point</ins>: From
+          the failure point onwards, the raw force and
+          displacement data were retained without modification.
+          <br />
+          <br />
+          6. <ins>Create Scatter Plot</ins>: A scatter plot was
+          generated using the cleaned force and displacement data,
+          resulting in a clearer representation of the material's
+          behavior.
+          <br />
+          <br />
+          This data cleaning process was repeated for specimens
+          with thicknesses of 0.2 mm, 0.5 mm, 1 mm, and 2 mm to
+          ensure consistency and accuracy across all tests.
+        </p>
+      </div>
+    </div>
+    <div id="appendix-sub-2">
+      <h3>
+        Appendix B: Scatter Plot of 0.2mm, 0.5mm, 1mm and 2mm With
+        Cleaned Data
+      </h3>
+      <image-component tag="image" source="assets/appendix-b-1.png"
+        subtitle="Appendix Figure 2: Scatter plot of cleaned data of 0.2mm silicone "></image-component>
+      <br />
+      <image-component tag="image" source="assets/appendix-b-2.png"
+        subtitle="Appendix Figure 3: Scatter plot of cleaned data of 0.5mm silicone "></image-component>
+      <br />
+      <image-component tag="image" source="assets/appendix-b-3.png"
+        subtitle="Appendix Figure 4: Scatter plot of cleaned data of 1.0mm silicone "></image-component>
+      <br />
+      <image-component tag="image" source="assets/appendix-b-4.png"
+        subtitle="Appendix Figure 5: Scatter plot of cleaned data of 2.0mm silicone "></image-component>
+    </div>
+    <div id="appendix-sub-3">
+      <h3>
+        Appendix C: Cost-Benefit Analysis Of The Purchased Silicone
+      </h3>
+      <p>
+        The cost-benefit analysis quantifies the potential savings achievable by employing silicone for vacuum
+        bagging.
+        <br /><br />
+        A single roll of SL850 vacuum bagging film measures 304 m in length, 1.22 m in width, and 0.0508 mm in
+        thickness, and is priced at S$1562. Given that a 1 m × 1 m film is required for each composite layup, one roll
+        can facilitate approximately 304 vacuum bagging operations, resulting in a cost of S$5.14 per operation
+        (1562/304 = S$5.14).
+        <br /><br />
+        In comparison, a 0.2 mm silicone sheet, with dimensions of 1 m in length and 0.5 m in width, costs S$11.31.
+        Dividing the silicone cost by the SL850 cost yields a factor of 2.20 (11.31/5.14 = 2.20), indicating that if
+        the silicone sheet can be reused at least three times, its cost would be offset relative to the cost of
+        single-use SL850 vacuum bags.
+        <br /><br />
+        Future work will include testing with an actual composite mold to verify the reusability and
+        cost-effectiveness of the silicone sheet.
+      </p>
+    </div>
+    <div id="appendix-sub-4">
+      <h3>
+        Appendix D: Video Footage of 10cm Cube Under Vacuum
+      </h3>
+      <video-component tag="elongation" source="assets/new0video.mp4"
+        subtitle="Video Footage: 10cm Cube Under Vacuum"></video-component>
+    </div>
+  </div>
+
+  <!-- This is the code to display the scroll to top button for ergonomic -->
+  <!-- You can leave it as it is, or if you don't like its aesthetics you can also just delete it, -->
+  <!-- but it might reduce the user experience. -->
+  <sl-button class="scroll-to-top" variant="primary" size="medium" circle onclick="scrollToTop()">
+    <sl-icon name="arrow-up" label="Settings"></sl-icon>
+  </sl-button>
+
+  <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+  <script type="module" src="./components/table-component/table-component.js"></script>
+</body>
+
+</html>
